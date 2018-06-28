@@ -27,10 +27,25 @@ docker pull nielsborie/networkit-docker
 ```
 
 ##### And run it
+###### Basic run (in detached mode)
 ```bash
-docker run -p 8887:8888 nielsborie/networkit-docker start-notebook.sh --NotebookApp.password="sha1:ff6a3551e13f:c3edadaa0cb4bed02293c96c14d755611069a4ba" 
+docker run --name NETWORKIT -d -p 8887:8888 nielsborie/networkit-docker
+```
+###### start & stop
+```bash
+docker start NETWORKIT
+docker stop NETWORKIT
+```
+###### If you want a real password (and avoid copy/paste token step...) 
+```bash
+docker run --name NETWORKIT -d -p 8887:8888 -d nielsborie/networkit-docker start-notebook.sh --NotebookApp.password="sha1:ff6a3551e13f:c3edadaa0cb4bed02293c96c14d755611069a4ba" 
 ```
 **default password = bleckwen**
+
+##### If you want to share your current working folder, you can map it with "-v" or "--volume"
+```bash
+docker run --name NETWORKIT -p 8887:8888 -d -v <your-directory/>:/home/jovyan/work/ -e NB_UID=<your-UID/> --user root nielsborie/networkit-docker start-notebook.sh --NotebookApp.password="sha1:ff6a3551e13f:c3edadaa0cb4bed02293c96c14d755611069a4ba"
+```
 
 ###### If you need to change the password check : 
 [Jupyter notebook documentation](http://jupyter-notebook.readthedocs.io/en/stable/public_server.html)
