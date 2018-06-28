@@ -28,7 +28,7 @@ docker pull nielsborie/networkit-docker
 
 ##### And run it
 ```bash
-docker run -p 8887:8888 networkit-docker start-notebook.sh --NotebookApp.password="sha1:ff6a3551e13f:c3edadaa0cb4bed02293c96c14d755611069a4ba" 
+docker run -p 8887:8888 nielsborie/networkit-docker start-notebook.sh --NotebookApp.password="sha1:ff6a3551e13f:c3edadaa0cb4bed02293c96c14d755611069a4ba" 
 ```
 **default password = bleckwen**
 
