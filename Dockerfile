@@ -6,25 +6,25 @@ LABEL maintainer="Niels BORIE"
 
 USER root
 
-# Install python-tk (networkit dependencies)
+### --- Install python-tk (networkit dependencies)
 RUN apt-get update && \
     apt-get install -y --no-install-recommends python-tk software-properties-common htop && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# Install dependency gcc/g++
+### --- Install dependency gcc/g++
 RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
 
-# Install gcc/g++ (networkit dependencies)
+### --- Install gcc/g++ (networkit dependencies)
 RUN apt-get update && \
     apt-get install -y --no-install-recommends gcc-5 g++-5 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# Update alternatives
+### --- Update alternatives
 RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 60 --slave /usr/bin/g++ g++ /usr/bin/g++-5
 
-# Conda tabulate seaborn  networkx
+### --- Conda install tabulate, seaborn, networkx
 RUN conda install --quiet --yes \
     'networkx' \
     'tabulate' && \
