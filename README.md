@@ -21,6 +21,7 @@ More info at [Networkit documentation](http://networkit.parco.iti.kit.edu).
 
 ## How to run it? 
 ##### You can pull the already built image
+* Available here : <https://hub.docker.com/r/nielsborie/networkit-docker/>
 ```bash
 docker pull nielsborie/networkit-docker
 ```
