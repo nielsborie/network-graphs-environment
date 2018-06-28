@@ -19,7 +19,7 @@ More info at [Networkit documentation](http://networkit.parco.iti.kit.edu).
 
 ---
 
-## How to run? 
+## How to run it? 
 ##### You can pull the already built image
 ```bash
 docker pull nielsborie/networkit-docker
@@ -39,7 +39,7 @@ docker run -p 8887:8888 networkit-docker start-notebook.sh --NotebookApp.passwor
 
 ---
 
-## How to build? 
+## How to build it? 
 #### First clone the repository
 ```bash
 git clone https://github.com/nielsborie/networkit-docker.git
