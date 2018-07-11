@@ -27,10 +27,17 @@ docker pull nielsborie/networkit-docker
 ```
 
 ##### And run it
-###### Basic run (in detached mode)
+###### Basic run
+
 ```bash
-docker run --name NETWORKIT -d -p 8887:8888 nielsborie/networkit-docker
+docker run --name NETWORKIT -p 8887:8888 nexus.an.local:7000/networkit-docker
 ```
+###### in detached mode (-d)
+
+```bash
+docker run --name NETWORKIT -d -p 8887:8888 nexus.an.local:7000/networkit-docker
+```
+
 ###### start & stop
 ```bash
 docker start NETWORKIT
