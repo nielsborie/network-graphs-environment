@@ -32,6 +32,9 @@ RUN conda install --quiet --yes \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER
 
+### --- Install python-igraph
+RUN conda install -c conda-forge python-igraph
+
 ### --- Downgrade pip
 RUN $CONDA_DIR/bin/python -m pip install pip==9.0.1 
 
