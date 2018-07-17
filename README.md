@@ -13,9 +13,10 @@ More info at [Networkit documentation](http://networkit.parco.iti.kit.edu).
 
 * Jupyter Notebook
 * Conda Python 3.6.x
-* Python Machine Learning : numpy, pandas, matplotlib, scipy, seaborn, scikit-learn
-* Python graph libraries : networkx, networkit
-* Python Deep Learning : TensorFlow+Keras
+* GCC/G++ 5
+* Python Machine Learning : [Numpy](http://www.numpy.org/), [Pandas](http://pandas.pydata.org/), [Matplotlib](http://matplotlib.org/), [SciPy](https://www.scipy.org/), [Seaborn](https://seaborn.pydata.org/),[scikit-learn](https://www.anaconda.com/what-is-anaconda/)
+* Python graph libraries : [NetworkX](https://networkx.github.io/), [Networkit](http://networkit.parco.iti.kit.edu), [python-igraph](http://igraph.org/python/)
+* Python Deep Learning : [Tensorflow](https://www.tensorflow.org/), [Keras](http://keras.io/)
 
 ---
 
