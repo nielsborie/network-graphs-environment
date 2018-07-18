@@ -2,7 +2,7 @@
 The networkit-docker is a ready-to-run Docker image containing the python library networkit and and other things.
 ---
 <p align="center">
-<img src="https://github.com/nielsborie/networkit-docker/blob/master/view/graph.png" width=800 />
+<img src="https://github.com/nielsborie/networkit-docker/blob/master/view/graph.png" width=600 />
 </p>
 
 
