@@ -5,12 +5,6 @@ The networkit-docker is a ready-to-run Docker image containing the python librar
 <img src="https://github.com/nielsborie/networkit-docker/blob/master/view/graph.png" width=600 />
 </p>
 
-
-<p align="center">
-<img src="https://github.com/nielsborie/networkit-docker/blob/master/view/logo.png" width=800 />
-</p>
-
-
 ---
 
 ## What is Networkit?
@@ -29,9 +23,11 @@ igraph can be programmed in R, Python and C/C++.
 More info at [igraph documentation](http://igraph.org/redirect.html).
 
 ---
+# What is in there?
+
 
 <p align="center">
-<img src="https://github.com/nielsborie/networkit-docker/blob/master/view/logo.png" width=800 />
+<img src="https://github.com/nielsborie/networkit-docker/blob/master/view/logo2.png" width=800 />
 </p>
 
 ---
