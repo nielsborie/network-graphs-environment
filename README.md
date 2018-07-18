@@ -1,9 +1,8 @@
 # networkit-docker
 The networkit-docker is a ready-to-run Docker image containing the python library networkit and and other things.
 ---
-<p align="center">
-<img src="https://github.com/nielsborie/networkit-docker/blob/master/view/graph.png" width=600 />
-</p>
+
+![graph](https://github.com/nielsborie/networkit-docker/blob/master/view/graph.png)
 
 ---
 
@@ -25,10 +24,7 @@ More info at [igraph documentation](http://igraph.org/redirect.html).
 ---
 # What is in there?
 
-
-<p align="center">
-<img src="https://github.com/nielsborie/networkit-docker/blob/master/view/logo2.png" width=800 />
-</p>
+![logo2](https://github.com/nielsborie/networkit-docker/blob/master/view/logo2.png)
 
 ---
 
@@ -84,9 +80,7 @@ Once we've built the image, we have all the frameworks we need installed in it. 
 > - This images is based on [jupyter-tensorflow docker](https://github.com/jupyter/docker-stacks/tree/master/tensorflow-notebook).
 > - By default the image automatically launches a jupyter notebook on port 8887 of your localhost.
 
-<p align="center">
-<img src="https://github.com/nielsborie/networkit-docker/blob/master/view/jupyter.PNG" width=700 />
-</p>
+![jupyter](https://github.com/nielsborie/networkit-docker/blob/master/view/jupyter.PNG)
 
 * ### Basic run
 Simplest command to launch the container.
