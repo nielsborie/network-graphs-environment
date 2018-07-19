@@ -120,7 +120,7 @@ docker run --name NETWORKIT -d -p 8887:8888 -d nielsborie/networkit-docker start
 
 * ##### If you want to share your current working folder, you can map it with "-v" or "--volume"
 ```bash
-docker run --name NETWORKIT -p 8887:8888 -d -v <your-directory/>:/home/jovyan/work/ -e NB_UID=<your-UID/> --user root nielsborie/networkit-docker start-notebook.sh --NotebookApp.password="sha1:ff6a3551e13f:c3edadaa0cb4bed02293c96c14d755611069a4ba"
+docker run --name NETWORKIT -p 8887:8888 -d -v /sharedfolder:/home/jovyan/work/ -e NB_UID=<your-UID/> --user root nielsborie/networkit-docker start-notebook.sh --NotebookApp.password="sha1:ff6a3551e13f:c3edadaa0cb4bed02293c96c14d755611069a4ba"
 ```
 
 | Parameter      | Explanation |
@@ -130,7 +130,7 @@ docker run --name NETWORKIT -p 8887:8888 -d -v <your-directory/>:/home/jovyan/wo
 |`-p 8887:8888`    | This exposes the ports inside the container so they can be accessed from the host. The format is `-p <host-port>:<container-port>`. The default jupyter notebook runs on port 8888 |
 |`-v /sharedfolder:/root/sharedfolder/` | This shares the folder `/sharedfolder` on your host machine to `/home/jovyan/work/sharedfolder/` inside your container. Any data written to this folder by the container will be persistent. You can modify this to anything of the format `-v /local/shared/folder:/shared/folder/in/container/` |
 |`-e NB_UID=<your-UID> --user root`   | This fix permission issues under the container, you need to replace <your-UID> with your UID.  You can get it with : `id -u` |
-|`nielsborie/networkit-docker`   | This the image that you want to run. The format is `image:tag`. In our case, we use the image `ml-docker` and tag `latest` |
+|`nielsborie/networkit-docker`   | This the image that you want to run. The format is `image:tag`. In our case, we use the image `networkit-docker` and tag `latest` |
 |`start-notebook.sh --NotebookApp.password`   | It allows to launch the jupyter with a password already configured to `bleckwen` |
 
 ---
