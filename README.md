@@ -1,5 +1,5 @@
 # networkit-docker
-The networkit-docker is a ready-to-run Docker image containing the python library networkit and and other things.
+The networkit-docker is a ready-to-run Docker image containing the python library networkit and other things.
 ---
 
 ![graph](https://github.com/nielsborie/networkit-docker/blob/master/view/graph.png)
