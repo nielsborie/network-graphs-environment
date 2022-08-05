@@ -1,5 +1,5 @@
-# networkit-docker
-The networkit-docker is a ready-to-run Docker image containing the python library networkit and other things.
+# network-graphs-environment
+The network-graphs-environment is a ready-to-run Docker image containing the python library networkit and other things.
 ---
 
 ![graph](doc/graph.png)
@@ -47,26 +47,26 @@ Install Docker following the installation guide for your platform: [here](https:
 
 ## Obtaining the Docker image
 * ### Option 1: Download the Docker image from Docker Hub
-Available here : (https://hub.docker.com/r/nielsborie/networkit-docker/)
+Available here : (https://hub.docker.com/r/nielsborie/network-graphs-environment/)
 
 ```bash
-docker pull nielsborie/networkit-docker
+docker pull nielsborie/network-graphs-environment
 ```
 * ### Option 2: Build the Docker image locally
 1. #####  clone the repository
 ```bash
-git clone https://github.com/nielsborie/networkit-docker.git
-cd /networkit-docker
+git clone https://github.com/nielsborie/network-graphs-environment.git
+cd /network-graphs-environment
 ```
 
 2. ##### basic building : 
 ```bash
-docker build . -t networkit-docker
+docker build . -t network-graphs-environment
 ```
 
 3. ##### If you have a proxy issue execute the following line : 
 ```bash
-docker build . --no-cache --force-rm --build-arg http_proxy=<proxy> --build-arg https_proxy=<proxy> --build-arg no_proxy=localhost,<proxy>,<proxy>,.an.local -t networkit-docker
+docker build . --no-cache --force-rm --build-arg http_proxy=<proxy> --build-arg https_proxy=<proxy> --build-arg no_proxy=localhost,<proxy>,<proxy>,.an.local -t network-graphs-environment
 ```
 
 ---
@@ -85,33 +85,33 @@ Once we've built the image, we have all the frameworks we need installed in it. 
 * ### Basic run
 Simplest command to launch the container.
 ```bash
-docker run --name NETWORKIT -p 8887:8888 nielsborie/networkit-docker
+docker run --name network-graphs-env -p 8887:8888 nielsborie/network-graphs-environment
 ```
 
 
 ##### If you don't want to be stick to your terminal, you can run it in detached mode (-d)
 
 ```bash
-docker run --name NETWORKIT -d -p 8887:8888 nielsborie/networkit-docker
+docker run --name network-graphs-env -d -p 8887:8888 nielsborie/network-graphs-environment
 ```
 
 * ### Start & Stop
 Once you create the container, all you need to do is launch it : 
 ```bash
-docker start NETWORKIT
-docker stop NETWORKIT
+docker start network-graphs-env
+docker stop network-graphs-env
 ```
 
 * ### Enter in the running container
 Since you launched the container, you can get in and be root inside the image!
 ```bash
-docker exec -it NETWORKIT /bin/bash
+docker exec -it network-graphs-env /bin/bash
 ```
 
 * ### Customize your Container
 * ##### If you want a real password (and avoid copy/paste token step...) 
 ```bash
-docker run --name NETWORKIT -d -p 8887:8888 -d nielsborie/networkit-docker start-notebook.sh --NotebookApp.password="sha1:ff6a3551e13f:c3edadaa0cb4bed02293c96c14d755611069a4ba" 
+docker run --name network-graphs-env -d -p 8887:8888 -d nielsborie/network-graphs-environment start-notebook.sh --NotebookApp.password="sha1:ff6a3551e13f:c3edadaa0cb4bed02293c96c14d755611069a4ba" 
 ```
 
 > **Note:**
@@ -120,18 +120,18 @@ docker run --name NETWORKIT -d -p 8887:8888 -d nielsborie/networkit-docker start
 
 * ##### If you want to share your current working folder, you can map it with "-v" or "--volume"
 ```bash
-docker run --name NETWORKIT -p 8887:8888 -d -v /sharedfolder:/home/jovyan/work/ -e NB_UID=<your-UID/> --user root nielsborie/networkit-docker start-notebook.sh --NotebookApp.password="sha1:ff6a3551e13f:c3edadaa0cb4bed02293c96c14d755611069a4ba"
+docker run --name network-graphs-env -p 8887:8888 -d -v /sharedfolder:/home/jovyan/work/ -e NB_UID=<your-UID/> --user root nielsborie/network-graphs-environment start-notebook.sh --NotebookApp.password="sha1:ff6a3551e13f:c3edadaa0cb4bed02293c96c14d755611069a4ba"
 ```
 
-| Parameter      | Explanation |
-|----------------|-------------|
-|`-it`             | This creates an interactive terminal you can use to iteract with your container |
-|`--name`             | This set a name to our container, in our case we use `NETWORKIT` but you can change it |
-|`-p 8887:8888`    | This exposes the ports inside the container so they can be accessed from the host. The format is `-p <host-port>:<container-port>`. The default jupyter notebook runs on port 8888 |
+| Parameter      | Explanation                                                                                                                                                                                                                                                                                       |
+|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|`-it`             | This creates an interactive terminal you can use to iteract with your container                                                                                                                                                                                                                   |
+|`--name`             | This set a name to our container, in our case we use `network-graphs-env` but you can change it                                                                                                                                                                                                   |
+|`-p 8887:8888`    | This exposes the ports inside the container so they can be accessed from the host. The format is `-p <host-port>:<container-port>`. The default jupyter notebook runs on port 8888                                                                                                                |
 |`-v /sharedfolder:/root/sharedfolder/` | This shares the folder `/sharedfolder` on your host machine to `/home/jovyan/work/sharedfolder/` inside your container. Any data written to this folder by the container will be persistent. You can modify this to anything of the format `-v /local/shared/folder:/shared/folder/in/container/` |
-|`-e NB_UID=<your-UID> --user root`   | This fix permission issues under the container, you need to replace <your-UID> with your UID.  You can get it with : `id -u` |
-|`nielsborie/networkit-docker`   | This the image that you want to run. The format is `image:tag`. In our case, we use the image `networkit-docker` and tag `latest` |
-|`start-notebook.sh --NotebookApp.password`   | It allows to launch the jupyter with a password already configured to `bleckwen` |
+|`-e NB_UID=<your-UID> --user root`   | This fix permission issues under the container, you need to replace <your-UID> with your UID.  You can get it with : `id -u`                                                                                                                                                                      |
+|`nielsborie/network-graphs-environment`   | This the image that you want to run. The format is `image:tag`. In our case, we use the image `network-graphs-environment` and tag `latest`                                                                                                                                                       |
+|`start-notebook.sh --NotebookApp.password`   | It allows to launch the jupyter with a password already configured to `bleckwen`                                                                                                                                                                                                                  |
 
 ---
 
