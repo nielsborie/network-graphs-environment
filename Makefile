@@ -30,3 +30,7 @@ start: ## Start the networkit-docker container
 
 stop: ## Stop the networkit-docker container
 	docker start network-env
+
+### RELEASE ###
+generate-changelog: ## Generate/Update CHANGELOG.md file
+	gitmoji-changelog
