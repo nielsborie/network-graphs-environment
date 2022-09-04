@@ -1,0 +1,22 @@
+{
+  "name": "network-graphs-environment",
+  "version": "1.0.0",
+  "description": "Project to generate a docker image containing the python networkit library and all of its dependencies.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nielsborie/network-graphs-environment.git"
+  },
+  "keywords": [
+    "graph"
+  ],
+  "author": "Niels Borie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nielsborie/network-graphs-environment/issues"
+  },
+  "homepage": "https://github.com/nielsborie/network-graphs-environment#readme"
+}
