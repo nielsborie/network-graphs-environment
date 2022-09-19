@@ -1,0 +1,9 @@
+name: py39
+channels:
+  - conda-forge
+  - anaconda
+dependencies:
+  - pip
+  - networkit
+  - python-igraph
+  - networkx
