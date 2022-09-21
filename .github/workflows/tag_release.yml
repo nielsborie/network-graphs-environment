@@ -14,7 +14,7 @@ jobs:
                   git config user.email noreply@github.com
             - name: Setup release information
               run: |
-                  versionName=`cat ./version.txt`
+                  versionName=`cat ./VERSION.txt`
                   export VERSION_NAME=$versionName
                   echo "::set-env name=VERSION_NAME::$VERSION_NAME"
             - name: Extract release notes
