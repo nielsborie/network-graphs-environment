@@ -52,28 +52,46 @@ jobs:
         echo "::set-output name=commit::$(git rev-parse HEAD)"
         git push origin release/v${{ github.event.inputs.releaseVersion }}
     - name: Create pull request into main
-      uses: thomaseizinger/create-pull-request@1.0.0
+      id: cpr-main
+      uses: peter-evans/create-pull-request@v4
       with:
-       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-       head: release/v${{ github.event.inputs.releaseVersion }}
-       base: main
-       title: v${{ github.event.inputs.releaseVersion }} into main
-       reviewers: ${{ github.event.issue.user.login }}
-       body: |
+        committer: GitHub <noreply@github.com>
+        author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+        signoff: false
+        branch: release/v${{ github.event.inputs.releaseVersion }}
+        base: main
+        delete-branch: false
+        title: v${{ github.event.inputs.releaseVersion }} into main
+        body: |
            Hi!
            This PR was created in response workflow running.
            I've updated the version name and code commit: ${{ steps.make-commit.outputs.commit }}.
            Description : ${{ github.event.inputs.releaseDescription }}
+        labels: |
+          GitHub Actions
+          Release
+        draft: false
+        assignees: ${{ github.event.issue.user.login }}
+        reviewers: ${{ github.event.issue.user.login }}
     - name: Create pull request to develop
-      uses: thomaseizinger/create-pull-request@1.0.0
+      id: cpr-develop
+      uses: peter-evans/create-pull-request@v4
       with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          head: release/v${{ github.event.inputs.releaseVersion }}
-          base: develop
-          title: v${{ github.event.inputs.releaseVersion }} into develop
-          reviewers: ${{ github.event.issue.user.login }}
-          body: |
-              Hi!
-              This PR was created in response workflow running.
-              I've updated the version name and code commit: ${{ steps.make-commit.outputs.commit }}.
-              Description : ${{ github.event.inputs.releaseDescription }}
+        committer: GitHub <noreply@github.com>
+        author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+        signoff: false
+        branch: release/v${{ github.event.inputs.releaseVersion }}
+        base: develop
+        delete-branch: false
+        title: v${{ github.event.inputs.releaseVersion }} into main
+        body: |
+          Hi!
+          This PR was created in response workflow running.
+          I've updated the version name and code commit: ${{ steps.make-commit.outputs.commit }}.
+          Description : ${{ github.event.inputs.releaseDescription }}
+        labels: |
+          GitHub Actions
+          Release
+        draft: false
+        assignees: ${{ github.event.issue.user.login }}
+        reviewers: ${{ github.event.issue.user.login }}
