@@ -1,24 +1,44 @@
 # Changelog
 
-<a name="1.0.0"></a>
-## 1.0.0 (2022-09-04)
+<a name="1.0.1"></a>
+## 1.0.1 (2022-09-22)
 
 ### Added
 
-- ✨ Introduce a package.json file [[865746f](https://github.com/nielsborie/network-graphs-environment/commit/865746f03972d41506eeec3f9c4452aedf1d3126)]
+- 👷‍♂️ Use an other GitHub action to create pull request [[6774ae3](https://github.com/nielsborie/network-graphs-environment/commit/6774ae3febe07c8cf1a638c77fd89f9d7b93c36c)]
+- ✅ Use act to test GitHub action locally [[c62df5a](https://github.com/nielsborie/network-graphs-environment/commit/c62df5a199a1a9cdbb35880f97d2459f06fe6d7a)]
+- ✨ Introduce a package.json file [[22a3316](https://github.com/nielsborie/network-graphs-environment/commit/22a3316aa01e69a011cd2d594cd249d47b7c4f68)]
 
 ### Changed
 
+- 🏗️ Try actions/github-script to create pull request [[33f4dff](https://github.com/nielsborie/network-graphs-environment/commit/33f4dff1a7ef7a1a0d0159e1429ee184c60c81c7)]
+- 🚨 Fix GITHUB_TOKEN env variable [[8ad97f7](https://github.com/nielsborie/network-graphs-environment/commit/8ad97f787bc0c8f90a8d3062500cb4e994f5abd7)]
 - 🚚 Rename repository to network-graphs-environment [[0e0bcc9](https://github.com/nielsborie/network-graphs-environment/commit/0e0bcc938ab37590d7bb0bffc5a6c40fe4474f82)]
 - 🚚 Rename /view folder to /doc folder [[6913ed9](https://github.com/nielsborie/network-graphs-environment/commit/6913ed983488ace356cc9015b57e87392ee82bec)]
 
+### Breaking changes
+
+- 💥 Use base image &amp; install dependencies using mamba [[86887ea](https://github.com/nielsborie/network-graphs-environment/commit/86887ea71726b258fbb709e35066c98b5e141758)]
+
 ### Fixed
 
+- ✏️ Try double quote instead of simple quote to bypass unknow identifier error [[4820b6a](https://github.com/nielsborie/network-graphs-environment/commit/4820b6ab89686f51857836f516472980ac469f1a)]
+- 🐛 Try without $ identifier [[27ff001](https://github.com/nielsborie/network-graphs-environment/commit/27ff0018162a171e5a4914c1285cd7acd8077453)]
+- 💚 Fetch all history for all tags and branches in actions/checkout@v3 [[de9eb3a](https://github.com/nielsborie/network-graphs-environment/commit/de9eb3a93a653618e3fff8cf8137bc5d63408e19)]
+- 🐛 Fix input name create_pull_request GitHub action [[1f01ef9](https://github.com/nielsborie/network-graphs-environment/commit/1f01ef96cf5e8493d7ad95d299c92dcfaf925735)]
+- 🚑 Initialize git config &amp; create release branch [[8163a61](https://github.com/nielsborie/network-graphs-environment/commit/8163a613bde0fdb45ff8ba7fa20819113c8538f1)]
+- 🚑 Add initial version files [[ca65413](https://github.com/nielsborie/network-graphs-environment/commit/ca654138ef2de283edd911cae690910ee0e47119)]
+- 🚑 Update file paths with git add commands in GitHub actions [[aec564e](https://github.com/nielsborie/network-graphs-environment/commit/aec564ea1e0eb10bbe38fcdc0bbdf3003bb67af3)]
 - ✏️ Rename /doc folder to /docs [[4ab0457](https://github.com/nielsborie/network-graphs-environment/commit/4ab04570cf4d6d42839ac0149373325d0c0292b8)]
 
 ### Miscellaneous
 
-- 🔨 Add the generate-changelog goal and feed the CHANGELOG.md [[abe013f](https://github.com/nielsborie/network-graphs-environment/commit/abe013fe7fe22e03ddce68792b1c62cad3ab0878)]
+- ⚗️ Push release branch in the same stage that creates the commit [[4d237df](https://github.com/nielsborie/network-graphs-environment/commit/4d237df3d5463fec23ea6094b3be8acd1260a973)]
+- 🧱 Add GitHub action to tag release version after a merge on branch main [[c6ee4f7](https://github.com/nielsborie/network-graphs-environment/commit/c6ee4f79c3c67145e09e6e9552adca7b347d6226)]
+- 🧱 Using GitHub actions to automate the release process [[b01bd00](https://github.com/nielsborie/network-graphs-environment/commit/b01bd003387454f9ff81529720166f5a55753e38)]
+- 🚀 Enable docker build and push Github actions [[70dd324](https://github.com/nielsborie/network-graphs-environment/commit/70dd3243bb114a044be1a823258ee78306c94447)]
+- 📝 Initiate the first CHANGELOG.md [[7b1b255](https://github.com/nielsborie/network-graphs-environment/commit/7b1b25533005db98b39c8e75142b7436f0cfb7d6)]
+- 🔨 Add the generate-changelog goal and feed the CHANGELOG.md [[f5b435c](https://github.com/nielsborie/network-graphs-environment/commit/f5b435c74099a7b0b08e7bb1548f2cfcf23f52cb)]
 - 🔨 Add Makefile [[e7f3f22](https://github.com/nielsborie/network-graphs-environment/commit/e7f3f224f0b48c00fc1a17691e883892e441474d)]
 - 🙈 Add .gitignore [[4f9f550](https://github.com/nielsborie/network-graphs-environment/commit/4f9f5500c3284c6ee42d5f62296000d26fe243e0)]
 -  Update README.md [[7357c12](https://github.com/nielsborie/network-graphs-environment/commit/7357c124d11aca625c4b15cf35c387ccb6594261)]
