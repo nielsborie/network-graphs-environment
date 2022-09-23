@@ -1,19 +1,19 @@
 # Changelog
 
-<a name="1.0.0"></a>
-## 1.0.0 (2022-09-23)
+<a name="1.0.1"></a>
+## 1.0.1 (2022-09-23)
 
 ### Added
 
-- 👷‍♂️ Use an other GitHub action to create pull request [[6774ae3](https://github.com/nielsborie/network-graphs-environment/commit/6774ae3febe07c8cf1a638c77fd89f9d7b93c36c)]
+- 👷‍♂️ Use an other GitHub action to create pull request [[1645e8e](https://github.com/nielsborie/network-graphs-environment/commit/1645e8ef126da7e42113338d95813d7fa135ab7f)]
 - ✅ Use act to test GitHub action locally [[c62df5a](https://github.com/nielsborie/network-graphs-environment/commit/c62df5a199a1a9cdbb35880f97d2459f06fe6d7a)]
 - ✨ Introduce a package.json file [[22a3316](https://github.com/nielsborie/network-graphs-environment/commit/22a3316aa01e69a011cd2d594cd249d47b7c4f68)]
 
 ### Changed
 
-- 🎨 Remove release not extraction [[dcc338b](https://github.com/nielsborie/network-graphs-environment/commit/dcc338b3a55a43b2a296db6960ff9e1c7ab43006)]
-- 🏗️ Try actions/github-script to create pull request [[33f4dff](https://github.com/nielsborie/network-graphs-environment/commit/33f4dff1a7ef7a1a0d0159e1429ee184c60c81c7)]
-- 🚨 Fix GITHUB_TOKEN env variable [[8ad97f7](https://github.com/nielsborie/network-graphs-environment/commit/8ad97f787bc0c8f90a8d3062500cb4e994f5abd7)]
+- 🎨 Remove release not extraction [[14980e5](https://github.com/nielsborie/network-graphs-environment/commit/14980e54c6d7aa5098619aa3ea6b7d3d869e4a53)]
+- 🏗️ Try actions/github-script to create pull request [[18bb3eb](https://github.com/nielsborie/network-graphs-environment/commit/18bb3ebf1518c17290ead60005f47dd44ccf2662)]
+- 🚨 Fix GITHUB_TOKEN env variable [[22f0ecd](https://github.com/nielsborie/network-graphs-environment/commit/22f0ecd831215c5bc64d6f80657ebd8942c1677c)]
 - 🚚 Rename repository to network-graphs-environment [[0e0bcc9](https://github.com/nielsborie/network-graphs-environment/commit/0e0bcc938ab37590d7bb0bffc5a6c40fe4474f82)]
 - 🚚 Rename /view folder to /doc folder [[6913ed9](https://github.com/nielsborie/network-graphs-environment/commit/6913ed983488ace356cc9015b57e87392ee82bec)]
 
@@ -23,19 +23,20 @@
 
 ### Fixed
 
-- ✏️ Try double quote instead of simple quote to bypass unknow identifier error [[4820b6a](https://github.com/nielsborie/network-graphs-environment/commit/4820b6ab89686f51857836f516472980ac469f1a)]
-- 🐛 Try without $ identifier [[27ff001](https://github.com/nielsborie/network-graphs-environment/commit/27ff0018162a171e5a4914c1285cd7acd8077453)]
-- 💚 Fetch all history for all tags and branches in actions/checkout@v3 [[de9eb3a](https://github.com/nielsborie/network-graphs-environment/commit/de9eb3a93a653618e3fff8cf8137bc5d63408e19)]
-- 🐛 Fix input name create_pull_request GitHub action [[1f01ef9](https://github.com/nielsborie/network-graphs-environment/commit/1f01ef96cf5e8493d7ad95d299c92dcfaf925735)]
-- 🚑 Initialize git config &amp; create release branch [[8163a61](https://github.com/nielsborie/network-graphs-environment/commit/8163a613bde0fdb45ff8ba7fa20819113c8538f1)]
-- 🚑 Add initial version files [[ca65413](https://github.com/nielsborie/network-graphs-environment/commit/ca654138ef2de283edd911cae690910ee0e47119)]
+- 🚑 Use GITHUB_ENV to store environment variables [[4965a6a](https://github.com/nielsborie/network-graphs-environment/commit/4965a6a890e6c760243526d63f8f672f0546aeef)]
+- ✏️ Try double quote instead of simple quote to bypass unknow identifier error [[5bb17c7](https://github.com/nielsborie/network-graphs-environment/commit/5bb17c741988ea871d91b0f68b3a2dec8198c91a)]
+- 🐛 Try without $ identifier [[a3a2089](https://github.com/nielsborie/network-graphs-environment/commit/a3a20899a49e56e79258de140cad7d943659002e)]
+- 💚 Fetch all history for all tags and branches in actions/checkout@v3 [[47ea0be](https://github.com/nielsborie/network-graphs-environment/commit/47ea0be27e219a10610290934d85e1ad227352fc)]
+- 🐛 Fix input name create_pull_request GitHub action [[0c65db3](https://github.com/nielsborie/network-graphs-environment/commit/0c65db39c234c1552a2799011e84a2279e160f04)]
+- 🚑 Initialize git config &amp; create release branch [[1794311](https://github.com/nielsborie/network-graphs-environment/commit/1794311d7ee1ba2a6ebf5927679dd6987a2f7d55)]
+- 🚑 Add initial version files [[2846e1a](https://github.com/nielsborie/network-graphs-environment/commit/2846e1afe659195445ab330933c160bc7c4dcd44)]
 - 🚑 Update file paths with git add commands in GitHub actions [[aec564e](https://github.com/nielsborie/network-graphs-environment/commit/aec564ea1e0eb10bbe38fcdc0bbdf3003bb67af3)]
 - ✏️ Rename /doc folder to /docs [[4ab0457](https://github.com/nielsborie/network-graphs-environment/commit/4ab04570cf4d6d42839ac0149373325d0c0292b8)]
 
 ### Miscellaneous
 
-- 👔 Update PR body in release branch action [[8bb67bd](https://github.com/nielsborie/network-graphs-environment/commit/8bb67bd7a289afc26c50fb25ba4e1d30a320560f)]
-- ⚗️ Push release branch in the same stage that creates the commit [[4d237df](https://github.com/nielsborie/network-graphs-environment/commit/4d237df3d5463fec23ea6094b3be8acd1260a973)]
+- 👔 Update PR body in release branch action [[aeb3347](https://github.com/nielsborie/network-graphs-environment/commit/aeb3347171b44d0e4aa51edb7d6ae24c77d08ed5)]
+- ⚗️ Push release branch in the same stage that creates the commit [[23f50bd](https://github.com/nielsborie/network-graphs-environment/commit/23f50bdbcd2bc3fa492be0ffe3d2975a56d449d2)]
 - 🧱 Add GitHub action to tag release version after a merge on branch main [[c6ee4f7](https://github.com/nielsborie/network-graphs-environment/commit/c6ee4f79c3c67145e09e6e9552adca7b347d6226)]
 - 🧱 Using GitHub actions to automate the release process [[b01bd00](https://github.com/nielsborie/network-graphs-environment/commit/b01bd003387454f9ff81529720166f5a55753e38)]
 - 🚀 Enable docker build and push Github actions [[70dd324](https://github.com/nielsborie/network-graphs-environment/commit/70dd3243bb114a044be1a823258ee78306c94447)]
