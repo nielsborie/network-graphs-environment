@@ -1,6 +1,9 @@
+# network-graphs-environment
+
 [![GitHub release](https://img.shields.io/github/v/release/nielsborie/network-graphs-environment)](https://github.com/nielsborie/network-graphs-environment/releases/latest)
 [![GitHub CI](https://img.shields.io/github/workflow/status/nielsborie/network-graphs-environment/Build%20and%20Publish)](https://github.com/nielsborie/network-graphs-environment/actions/workflows/build_and_publish.yml)
-# network-graphs-environment
+[![GitHub CI](https://img.shields.io/docker/v/nielsborie/network-graphs-environment?label=snapshot)](https://hub.docker.com/repository/docker/nielsborie/network-graphs-environment)
+
 The network-graphs-environment is a ready-to-run Docker image containing the python library networkit and other things.
 ---
 
